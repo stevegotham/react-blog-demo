@@ -11,6 +11,10 @@ class NewPost extends Component {
     author: 'Max'
   }
   
+  componentDidMount() {
+    console.log('da props 2: ', this.props);
+  }
+  
   createNewPostHandler = () => {
     const newPost = {...this.state};
     
