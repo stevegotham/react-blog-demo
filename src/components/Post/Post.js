@@ -1,5 +1,6 @@
 import React from 'react';
-// import { withRouter } from 'react-router-dom'; <=== Can be used to pass router props up the component chain
+import { withRouter } from 'react-router-dom'; 
+// <=== Can be used to pass router props up the component chain
 
 import './Post.css';
 
@@ -12,5 +13,5 @@ const post = (props) => (
   </article>
 );
 
-export default post;
-// export default withRouter(post);
+// export default post;
+export default withRouter(post);

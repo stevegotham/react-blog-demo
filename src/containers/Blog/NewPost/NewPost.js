@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import axios from '../../../axios';
 
 import './NewPost.css';
 
@@ -12,12 +12,11 @@ class NewPost extends Component {
   }
   
   componentDidMount() {
-    console.log('da props 2: ', this.props);
+    console.log('NewPost.js props: ', this.props);
   }
   
   createNewPostHandler = () => {
     const newPost = {...this.state};
-    
     axios.post('/posts', newPost)
       .then(response => {
         console.log(response);
@@ -27,7 +26,7 @@ class NewPost extends Component {
       });
   }
 
-  render () {
+  render() {
     return (
       <div className="NewPost">
         <h1>Add a Post</h1>
